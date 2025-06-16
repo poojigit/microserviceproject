@@ -1,0 +1,6 @@
+com\pooji\rating\Rating\Service\repositories\RatingRepository.class
+com\pooji\rating\Rating\Service\entities\Rating.class
+com\pooji\rating\Rating\Service\impl\RatingServiceImpl.class
+com\pooji\rating\Rating\Service\RatingServiceApplication.class
+com\pooji\rating\Rating\Service\services\RatingService.class
+com\pooji\rating\Rating\Service\controllers\RatingController.class

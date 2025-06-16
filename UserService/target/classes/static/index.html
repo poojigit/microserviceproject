@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Service Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>User Service Application</h1>
+    <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#user-management">User Management</a></li>
+            <li><a href="#service-management">Service Management</a></li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <div class="overview">
+            <div class="stat">
+                <h3>Total Users</h3>
+                <p id="total-users">0</p>
+            </div>
+            <div class="stat">
+                <h3>Active Services</h3>
+                <p id="active-services">0</p>
+            </div>
+        </div>
+        <button class="action-button" onclick="fetchUserCount()">Refresh Stats</button>
+    </section>
+    <section id="user-management">
+        <h2>User Management</h2>
+        <input type="text" id="search-users" placeholder="Search Users..." class="search-bar">
+        <button class="action-button" onclick="showAddUserForm()">Add User</button>
+        <table id="user-table">
+            <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- User rows will be populated here -->
+            </tbody>
+        </table>
+        <div id="add-user-form" class="hidden">
+            <h3>Add User</h3>
+            <input type="text" id="new-username" placeholder="Username" required>
+            <input type="email" id="new-email" placeholder="Email" required>
+            <button onclick="addUser()">Submit</button>
+            <button onclick="hideAddUserForm()">Cancel</button>
+        </div>
+    </section>
+    <section id="service-management">
+        <h2>Service Management</h2>
+        <input type="text" id="search-services" placeholder="Search Services..." class="search-bar">
+        <button class="action-button" onclick="showAddServiceForm()">Add Service</button>
+        <table id="service-table">
+            <thead>
+            <tr>
+                <th>Service Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Service rows will be populated here -->
+            </tbody>
+        </table>
+        <div id="add-service-form" class="hidden">
+            <h3>Add Service</h3>
+            <input type="text" id="new-service-name" placeholder="Service Name" required>
+            <input type="text" id="new-service-description" placeholder="Description" required>
+            <button onclick="addService()">Submit</button>
+            <button onclick="hideAddServiceForm()">Cancel</button>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2023 User Service Application</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
